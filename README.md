@@ -29,7 +29,10 @@ The app uses [http package](https://pub.dev/packages/http) for making network ca
 I ensured I used ***const*** where necessary for widgets so widgets do not rebuild when its state has not changed.
 
 For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
- ## :surfing_man: Testing :horse_racing:
+
+## :surfing_man: Testing :horse_racing:
+[earnipay](https://github.com/ernestkoko/earnipay) uses [bloc_test](https://pub.dev/packages/bloc_test/example) and ***flutter_test*** for both widgets and bloc testings.
+
 
 ## :white_check_mark: How to run the app 
 You can run this app on either Android or iOs mobile phone.
