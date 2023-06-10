@@ -40,5 +40,9 @@ Having done that you need to install [Flutter](https://docs.flutter.dev/get-star
 Please remember to create an account with [Unsplash](https://unsplash.com/documentation#registering-your-application) and append your client_id from [Unsplash](https://unsplash.com/documentation#registering-your-application) to the baseUrl on line 8 in the *photo_service.dart* file in the *lib/app/data/services/photo* folder.
 
 ## :people_hugging: Let's snap the app...
+
+# List page
 ![alt image1](image1.png)___
+
+# Details page
 ![alt image2](image2.png)

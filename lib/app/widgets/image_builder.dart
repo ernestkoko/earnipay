@@ -28,7 +28,6 @@ class _EarniNetworkImageState extends State<EarniNetworkImage> {
 
   @override
   Widget build(BuildContext context) {
-    print('REBUILD');
     return GestureDetector(
       onTap: widget.photo == null
           ? null
@@ -48,25 +47,16 @@ class _EarniNetworkImageState extends State<EarniNetworkImage> {
               : widget.progressIndicator!;
         },
         errorWidget: (context, uri, error) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Error: ${error.toString()}",
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(color: Colors.red),
-              ),
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    print("URL: ${widget.url}");
-                  });
-                },
-                child: const Text('Try again'),
+          return
+              Center(
+                child: Text(
+                  "Error: ${error.toString()}",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: Colors.red),
+                ),
               )
-            ],
-          );
+           ;
         },
       ),
     );
