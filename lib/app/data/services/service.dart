@@ -1,0 +1,1 @@
+export 'photo/photo_service_interface.dart';
