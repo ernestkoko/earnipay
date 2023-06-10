@@ -32,6 +32,9 @@ For the list of images and titles, I used [CustomScrollView](https://api.flutter
  ## :surfing_man: Testing :horse_racing:
 
 ## :white_check_mark: How to run the app 
+You can run this app on either Android or iOs mobile phone.
+Your have to download either [VS code](https://code.visualstudio.com/download) or [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMuW99G8v2aZbcrnfO4QFAiS7IIBnn3_dHMPOa0fSoroNEaxl-x2SmRoC-HwQAvD_BwE&gclsrc=aw.ds) by clicking on any of the links :point_left:  and follow the official installation guide
+
 ## :people_hugging: Let's snap the app...
 ![alt image1](image1.png)___
 ![alt image2](image2.png)
