@@ -31,6 +31,8 @@ I ensured I used ***const*** where necessary for widgets so widgets do not rebui
 For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
 
 ## :surfing_man: Testing :horse_racing:
+Testing is a crucial part of every application development. It ensures the different edge cases of 
+the app is well taken care of.
 [earnipay](https://github.com/ernestkoko/earnipay) uses [bloc_test](https://pub.dev/packages/bloc_test/example) and ***flutter_test*** for both widgets and bloc testings.
 
 
