@@ -1,4 +1,4 @@
-## earnipay :gift_heart:
+# earnipay :gift_heart:
 
 A  Flutter app that fetches a paginated list of images from a remote repository.
 
