@@ -1,7 +1,7 @@
 ## earnipay
 
 A  Flutter app that fetches a paginated list of images from a remote repository.
-![alt image1](image1.png)
+
 
 ## About App
 
@@ -25,3 +25,7 @@ The app uses [http package](https://pub.dev/packages/http) for making network ca
 I ensured I used const where necessary for widgets so widgets do not rebuild when its state has not changed.
 
 For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
+
+
+
+![alt image1](image1.png)
