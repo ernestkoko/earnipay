@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class PhotoService implements PhotoServiceInterface {
   final baseUrl =
-      'https://api.unsplash.com/photos/?client_id=H0tEAyYMIFs5UqCcFTS9jWmqyBS-lssajPxOLsowqk0&page';
+      'https://api.unsplash.com/photos/?client_id={CLIENT_ID}';
 
 
   @override
