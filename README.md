@@ -33,7 +33,8 @@ For the list of images and titles, I used [CustomScrollView](https://api.flutter
 ## :surfing_man: Testing :horse_racing:
 Testing is a crucial part of every application development. It ensures the different edge cases of 
 the app is well taken care of.
-[earnipay](https://github.com/ernestkoko/earnipay) uses [bloc_test](https://pub.dev/packages/bloc_test/example) and ***flutter_test*** for both widgets and bloc testings.
+
+[Earnipay](https://github.com/ernestkoko/earnipay) uses [bloc_test](https://pub.dev/packages/bloc_test/example) and ***flutter_test*** for both widgets and bloc testings.
 
 
 ## :white_check_mark: How to run the app 
