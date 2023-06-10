@@ -19,3 +19,8 @@ Every module also has a view where the UI for the module live.
 
 The app uses [http package](https://pub.dev/packages/http) for making network calls.
 
+## Performance Optimization
+
+I ensured I used const where necessary for widgets so widgets do not rebuild when its state has not changed.
+
+For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
