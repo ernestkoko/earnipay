@@ -26,7 +26,7 @@ The app uses [http package](https://pub.dev/packages/http) for making network ca
 
 ## :muscle: Performance Optimization :muscle:
 
-I ensured I used const where necessary for widgets so widgets do not rebuild when its state has not changed.
+I ensured I used _const_ where necessary for widgets so widgets do not rebuild when its state has not changed.
 
 For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
  ## :surfing_man: Testing :horse_racing:
