@@ -1,6 +1,7 @@
 ## earnipay
 
 A  Flutter app that fetches a paginated list of images from a remote repository.
+![alt image1](image1.png)
 
 ## About App
 
