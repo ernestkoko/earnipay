@@ -37,7 +37,7 @@ Your have to download either [VS code](https://code.visualstudio.com/download) o
 
 Having done that you need to install [Flutter](https://docs.flutter.dev/get-started/editor?tab=vscode) by following the guide [here](https://docs.flutter.dev/get-started/editor?tab=vscode) you can clone this app and run to enjoy nice views.
 
-Please remember to create an account with [Unsplash](https://unsplash.com/documentation#registering-your-application) and append your client_id from [Unsplash](https://unsplash.com/documentation#registering-your-application) to the baseUrl on line 8 in the *photo_service.dart* file in the *app/data/services/photo* folder.
+Please remember to create an account with [Unsplash](https://unsplash.com/documentation#registering-your-application) and append your client_id from [Unsplash](https://unsplash.com/documentation#registering-your-application) to the baseUrl on line 8 in the *photo_service.dart* file in the *lib/app/data/services/photo* folder.
 
 ## :people_hugging: Let's snap the app...
 ![alt image1](image1.png)___
