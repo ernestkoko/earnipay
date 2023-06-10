@@ -11,6 +11,10 @@ More images are being fetched when the user scrolls to the bottom of the list.
 
 When a user clicks on an image, the app navigates to a new screen where the image is displayed in a larger form with its details.
 
+The application is responsive on both Android and iOs mobile phones.
+
+
+
 ## State Management
 
 The app uses [bloc state management](https://pub.dev/packages/flutter_bloc) approach.
