@@ -11,7 +11,7 @@ More images are being fetched when the user scrolls to the bottom of the list.
 
 When a user clicks on an image, the app navigates to a new screen where the image is displayed in a larger form with its details.
 
-The application is responsive on both Android and iOs mobile phones.
+The application is responsive on both Android and iOs mobile devices.
 
 
 
@@ -20,7 +20,7 @@ The application is responsive on both Android and iOs mobile phones.
 The app uses [bloc state management](https://pub.dev/packages/flutter_bloc) approach.
 
 Every screen belongs to its own module and a module has a bloc folder where the Bloc, State and Event class live.
-Every module also has a view where the UI for the module live.
+Every module also has a view where the UI for the module lives.
 
 The app uses [http package](https://pub.dev/packages/http) for making network calls.
 
@@ -33,7 +33,7 @@ For the list of images and titles, I used [CustomScrollView](https://api.flutter
 
 ## :white_check_mark: How to run the app 
 You can run this app on either Android or iOs mobile phone.
-Your have to download either [VS code](https://code.visualstudio.com/download) or [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMuW99G8v2aZbcrnfO4QFAiS7IIBnn3_dHMPOa0fSoroNEaxl-x2SmRoC-HwQAvD_BwE&gclsrc=aw.ds) by clicking on any of the links :point_left:  and follow the official installation guide. 
+Your have to download either [VS code](https://code.visualstudio.com/download) or [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMuW99G8v2aZbcrnfO4QFAiS7IIBnn3_dHMPOa0fSoroNEaxl-x2SmRoC-HwQAvD_BwE&gclsrc=aw.ds) by clicking on any of the links :point_left:  and following the official installation guide. 
 
 Having done that you need to install [Flutter](https://docs.flutter.dev/get-started/editor?tab=vscode) by following the guide [here](https://docs.flutter.dev/get-started/editor?tab=vscode) you can clone this app and run to enjoy nice views.
 

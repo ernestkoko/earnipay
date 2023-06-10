@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../routes/app_routes.dart';
 
-class EarniNetworkImage extends StatelessWidget {
+class EarniNetworkImage extends StatefulWidget {
   EarniNetworkImage(
       {required this.url,
       this.photo,
@@ -19,36 +19,56 @@ class EarniNetworkImage extends StatelessWidget {
   int? index;
   Widget? progressIndicator;
 
-  double pp = 1;
+  @override
+  State<EarniNetworkImage> createState() => _EarniNetworkImageState();
+}
+
+class _EarniNetworkImageState extends State<EarniNetworkImage> {
+
 
   @override
   Widget build(BuildContext context) {
+    print('REBUILD');
     return GestureDetector(
-      onTap: photo == null
+      onTap: widget.photo == null
           ? null
           : () {
               Navigator.of(context)
-                  .pushNamed(AppRoute.photoDetails, arguments: photo);
+                  .pushNamed(AppRoute.photoDetails, arguments: widget.photo);
             },
       child: CachedNetworkImage(
-        imageUrl: url,
-        fit: fit,
+        imageUrl: widget.url,
+        fit: widget.fit,
         alignment: Alignment.topCenter,
         progressIndicatorBuilder: (ctx, uri, progress) {
-          return progressIndicator == null
+          return widget.progressIndicator == null
               ? LinearProgressIndicator(
                   value: progress.progress,
                 )
-              : progressIndicator!;
+              : widget.progressIndicator!;
         },
         errorWidget: (context, uri, error) {
-          return const Text(
-            "Error occurred",
-            overflow: TextOverflow.ellipsis,
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Error: ${error.toString()}",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: Colors.red),
+              ),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    print("URL: ${widget.url}");
+                  });
+                },
+                child: const Text('Try again'),
+              )
+            ],
           );
         },
       ),
     );
-
   }
 }
