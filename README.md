@@ -1,8 +1,8 @@
-# earnipay
+## earnipay
 
-A  Flutter app that fetches a paginated list of images from a remote repository for display on the home page..
+A  Flutter app that fetches a paginated list of images from a remote repository.
 
-## Getting Started
+## About App
 
 This project is a starting point for a Flutter application.
 
