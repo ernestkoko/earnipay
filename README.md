@@ -37,7 +37,7 @@ You have to download either [VS code](https://code.visualstudio.com/download) or
 
 After successful installation of [VS code](https://code.visualstudio.com/download) or [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMuW99G8v2aZbcrnfO4QFAiS7IIBnn3_dHMPOa0fSoroNEaxl-x2SmRoC-HwQAvD_BwE&gclsrc=aw.ds),  install [Flutter](https://docs.flutter.dev/get-started/editor?tab=vscode) by following the guide [here](https://docs.flutter.dev/get-started/editor?tab=vscode), then you can clone this [app](https://github.com/ernestkoko/earnipay) and run to enjoy nice views.
 
-Please remember to create an account with [Unsplash](https://unsplash.com/documentation#registering-your-application) and append your client_id from [Unsplash](https://unsplash.com/documentation#registering-your-application) to the baseUrl on line 8 in the ***photo_service.dart*** file in the ***lib/app/data/services/photo*** folder.
+Please remember to create an account with [Unsplash](https://unsplash.com/documentation#registering-your-application) and append your client_id from [Unsplash](https://unsplash.com/documentation#registering-your-application) to the baseUrl on line 8 in the [***photo_service.dart***](https://github.com/ernestkoko/earnipay/blob/main/lib/app/data/services/photo/photo_service.dart) file in the ***lib/app/data/services/photo*** folder.
 
 ## :people_hugging: Let's snap the app...
 
