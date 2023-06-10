@@ -31,7 +31,7 @@ I ensured I used const where necessary for widgets so widgets do not rebuild whe
 For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and the images are cached to ensure they are not always fetched anytime the user goes to the home page. And such cached image could be effortlessly displayed on the image details page.
  ## :surfing_man: Testing :horse_racing:
 
-## :green_square: How to run the app
+## :green_square: How to run the app :white_check_mark:
 ## :people_hugging: Let's snap the app...
 ![alt image1](image1.png)___
 ![alt image2](image2.png)
