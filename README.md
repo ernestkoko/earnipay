@@ -3,7 +3,7 @@
 A  Flutter app that fetches a paginated list of images from a remote repository.
 
 
-## kissing_heart: About App
+## About App
 
 This app displays a paginated list of images and displays them lazily on the home page.
 
