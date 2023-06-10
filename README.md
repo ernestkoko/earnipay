@@ -24,7 +24,7 @@ Every module also has a view where the UI for the module live.
 
 The app uses [http package](https://pub.dev/packages/http) for making network calls.
 
-## Performance Optimization
+## :muscle: Performance Optimization :muscle:
 
 I ensured I used const where necessary for widgets so widgets do not rebuild when its state has not changed.
 
