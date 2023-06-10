@@ -1,4 +1,4 @@
-## earnipay  :shipit:
+## earnipay :gift_heart:
 
 A  Flutter app that fetches a paginated list of images from a remote repository.
 
@@ -15,7 +15,7 @@ The application is responsive on both Android and iOs mobile phones.
 
 
 
-## State Management
+## State Management :star_struck:
 
 The app uses [bloc state management](https://pub.dev/packages/flutter_bloc) approach.
 
