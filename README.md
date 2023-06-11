@@ -40,11 +40,11 @@ This app has three categories of tests as outlined below with descriptions on wh
 
 1. Unit test
     - This test a single component of the app. It could be testing a single button, widgets, checking if a component or unit is present or doing what is it suppose to do.
-    - To run this test just run this on your terminal `flutter test` to run all the unit tests in the ***test folder***
+    - To run this test just copy and paste :point_right: `flutter test`  on your terminal. It executes all the unit tests in the ***test folder***
 
 2. Integration test
     - This bootstraps the application and and runs it on a connected `Android emulator`,  `iOs simulator` or a real device connected to the `code editor` of choice. SO to run this test, one has to have a a device connected or have an `emualtor` or `simulator`.
-    - To run this test you need to you need to open your terminal, navigate to your project root and then copy and paste `flutter test integration_test/app_test.dart` and then click the ***ENTER*** key on your keyboard'
+    - To run this test you need to you need to open your terminal, navigate to your project root and then copy and paste :point_right:  `flutter test integration_test/app_test.dart` and then click the ***ENTER*** key on your keyboard'
 
 3. App performance test
     - When you look at the `integration_test` folder at the root of the project you will find another 
