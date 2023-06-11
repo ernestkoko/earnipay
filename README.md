@@ -51,7 +51,7 @@ This app has three categories of tests as outlined below with descriptions on wh
     file named `perf_test.dart`. This file test the entire performance of the application. it tests if the app
     draws its 60 frames per second (60 FPS) or it is lagging behind with serious performance issues.
     
-    To capture the result of this test, there is another file,`perf_driver.dart` in the `test_driver` folder at the root of the project.
+    - To capture the result of this test, there is another file,`perf_driver.dart` in the `test_driver` folder at the root of the project.
     This file helps to collate the result of the performance test and drops it in the respective `platform folders` at the root of the project. 
     `e.g for Android it drops it in the 'android/build/'` folder. If you successfully run the test
     , open the folder and you can see two files, `scrolling_summary.timeline.json` and `scrolling_summary.timeline_summary.json`.
