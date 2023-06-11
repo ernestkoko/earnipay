@@ -46,7 +46,21 @@ This app has three categories of tests as outlined below with descriptions on wh
     - This bootstraps the application and and runs it on a connected `Android emulator`,  `iOs simulator` or a real device connected to the `code editor` of choice. SO to run this test, one has to have a a device connected or have an `emualtor` or `simulator`.
     - To run this test you need to you need to open your terminal, navigate to your project root and then copy and paste `flutter test integration_test/app_test.dart` and then click the ***ENTER*** key on your keyboard'
 
+3. App performance test
+    When you look at the `integration_test` folder at the root of the project you will find another 
+    file named `perf_test.dart`. This file test the entire performance of the application. it tests if the app
+    draws its 60 frames per second (60 FPS) or it is lagging behind with serious performance issues.
     
+    To capture the result of this test, there is another file,`perf_driver.dart` in the `test_driver` folder at the root of the project.
+    This file helps to collate the result of the performance test and drops it in the respective `platform folders` at the root of the project. 
+    `e.g for Android it drops it in the 'android/build/'` folder. If you successfully run the test
+    , open the folder and you can see two files, `scrolling_summary.timeline.json` and `scrolling_summary.timeline_summary.json`.
+    These two files can be analysed to get a close-to-user experience on how the app performs on a user's device.
+    - To run this test copy and paste `flutter drive \
+      --driver=test_driver/perf_driver.dart \
+      --target=integration_test/perf_test.dart \
+      --profile \
+      --no-dds` on your terminal after running your `emulator`, `simulator` or device.
 
 
 ## :white_check_mark: How to run the app 
