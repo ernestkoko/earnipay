@@ -56,7 +56,7 @@ This app has three categories of tests as outlined below with descriptions on wh
     `e.g for Android it drops it in the 'android/build/'` folder. If you successfully run the test
     , open the folder and you can see two files, `scrolling_summary.timeline.json` and `scrolling_summary.timeline_summary.json`.
     These two files can be analysed to get a close-to-user experience on how the app performs on a user's device.
-    - To run this test, go to the root of the project on terminal, copy and paste `flutter drive \
+    - To run this test, go to the root of the project on terminal, copy and paste :point_right: `flutter drive \
       --driver=test_driver/perf_driver.dart \
       --target=integration_test/perf_test.dart \
       --profile \
