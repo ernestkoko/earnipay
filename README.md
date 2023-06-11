@@ -11,7 +11,7 @@ More images are being fetched when the user scrolls to the bottom of the list.
 
 When a user clicks on an image, the app navigates to a new screen where the image is displayed in a larger form with its details.
 
-The application is responsive on both Android and iOs mobile devices.
+The application is responsive on both Android and iOs mobile devices whether on landscape or portrait mode.
 
 
 
