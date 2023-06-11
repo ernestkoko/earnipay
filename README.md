@@ -47,7 +47,7 @@ This app has three categories of tests as outlined below with descriptions on wh
     - To run this test you need to you need to open your terminal, navigate to your project root and then copy and paste `flutter test integration_test/app_test.dart` and then click the ***ENTER*** key on your keyboard'
 
 3. App performance test
-    When you look at the `integration_test` folder at the root of the project you will find another 
+    - When you look at the `integration_test` folder at the root of the project you will find another 
     file named `perf_test.dart`. This file test the entire performance of the application. it tests if the app
     draws its 60 frames per second (60 FPS) or it is lagging behind with serious performance issues.
     
