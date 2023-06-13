@@ -17,12 +17,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeRepository homeRepository;
   int page = 1;
   bool isFetching = false;
+  final List<Photo> photos = [];
 
   FutureOr<void> _loadMorePhotos(
       LoadMorePhotosEvent event, Emitter<HomeState> emit) async {
     emit(HomePhotoLoadingState());
     try {
-      final photos = await homeRepository.getPhotos(page: page);
+      final photosList = await homeRepository.getPhotos(page: page);
+      photos.addAll(photosList);
       emit(HomePhotosReadyState(photos: photos));
       page++;
     } catch (e) {

@@ -32,6 +32,7 @@ class PhotoDetails extends StatelessWidget {
                     child: EarniNetworkImage(
                       url: image!,
                       fit: BoxFit.fill,
+                      progressIndicator: const CircularProgressIndicator(),
                     ),
                   ),
                   Positioned(

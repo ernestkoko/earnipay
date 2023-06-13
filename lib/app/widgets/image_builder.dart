@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../routes/app_routes.dart';
 
-class EarniNetworkImage extends StatefulWidget {
+class EarniNetworkImage extends StatelessWidget {
   EarniNetworkImage(
       {required this.url,
       this.photo,
@@ -20,31 +20,26 @@ class EarniNetworkImage extends StatefulWidget {
   Widget? progressIndicator;
 
   @override
-  State<EarniNetworkImage> createState() => _EarniNetworkImageState();
-}
-
-class _EarniNetworkImageState extends State<EarniNetworkImage> {
-
-
-  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.photo == null
+      onTap: photo == null
           ? null
           : () {
               Navigator.of(context)
-                  .pushNamed(AppRoute.photoDetails, arguments: widget.photo);
+                  .pushNamed(AppRoute.photoDetails, arguments: photo);
             },
       child: CachedNetworkImage(
-        imageUrl: widget.url,
-        fit: widget.fit,
+        imageUrl: url,
+        fit: fit,
         alignment: Alignment.topCenter,
         progressIndicatorBuilder: (ctx, uri, progress) {
-          return widget.progressIndicator == null
+          return progressIndicator == null
               ? LinearProgressIndicator(
                   value: progress.progress,
                 )
-              : widget.progressIndicator!;
+              : SizedBox(
+              height: 10,width: 10,
+              child: progressIndicator!);
         },
         errorWidget: (context, uri, error) {
           return

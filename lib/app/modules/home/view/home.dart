@@ -9,11 +9,12 @@ class Home extends StatelessWidget {
 
   final controller = ScrollController();
 
-  final List<Photo> _photos = [];
+
 
   @override
   Widget build(BuildContext context) {
     //super.build(context);
+
     return SafeArea(
       child: Scaffold(
         body: BlocConsumer<HomeBloc, HomeState>(
@@ -23,7 +24,7 @@ class Home extends StatelessWidget {
             } else if (st is HomePhotosReadyState && st.photos.isEmpty) {
               _showSnackBar(context, message: "No more photos...");
             } else if (st is HomePhotosReadyState) {
-              _photos.addAll(st.photos);
+
             } else if (st is HomePhotoErrorState) {
               _showSnackBar(context, message: st.message);
               context.read<HomeBloc>().isFetching = false;
@@ -54,7 +55,7 @@ class Home extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
                   sliver: SliverGrid(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: _photos.isNotEmpty ? 2 : 1,
+                      crossAxisCount:context.read<HomeBloc>().photos.isNotEmpty ? 2 : 1,
                       mainAxisExtent: 200.0,
                       mainAxisSpacing: 10.0,
                       crossAxisSpacing: 10.0,
@@ -62,7 +63,7 @@ class Home extends StatelessWidget {
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
-                        if (state is HomePhotoErrorState && _photos.isEmpty) {
+                        if (state is HomePhotoErrorState && context.read<HomeBloc>().photos.isEmpty) {
                           return Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -85,7 +86,7 @@ class Home extends StatelessWidget {
                             child: CircularProgressIndicator(),
                           );
                         }
-                        if (state is HomePhotoLoadingState && _photos.isEmpty) {
+                        if (state is HomePhotoLoadingState && context.read<HomeBloc>().photos.isEmpty) {
                           return const Center(
                             child: CircularProgressIndicator(
                               color: Colors.red,
@@ -96,6 +97,7 @@ class Home extends StatelessWidget {
                         if (state is HomePhotosReadyState) {
                           context.read<HomeBloc>().isFetching = false;
                         }
+                        print("LENGTH: ${context.read<HomeBloc>().photos.length}");
                         return Stack(
                           children: [
                             Positioned(
@@ -104,8 +106,8 @@ class Home extends StatelessWidget {
                               top: 0,
                               child:
                               EarniNetworkImage(
-                                photo: _photos[index],
-                                url: "${_photos[index].image?.regular}",
+                                photo: context.read<HomeBloc>().photos[index],
+                                url: "${context.read<HomeBloc>().photos[index].image?.regular}",
                               ),
                             ),
                             Positioned(
@@ -120,7 +122,7 @@ class Home extends StatelessWidget {
                                     borderRadius:
                                         BorderRadius.circular(8)),
                                 child: Text(
-                                  '${_photos[index].user?.location}',
+                                  '${context.read<HomeBloc>().photos[index].user?.location}',
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -129,7 +131,7 @@ class Home extends StatelessWidget {
                           ],
                         );
                       },
-                      childCount: _photos.isNotEmpty ? _photos.length : 1,
+                      childCount: context.read<HomeBloc>().photos.isNotEmpty ? context.read<HomeBloc>().photos.length : 1,
 
                     ),
                   ),
