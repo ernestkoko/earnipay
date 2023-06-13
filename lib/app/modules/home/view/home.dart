@@ -1,25 +1,19 @@
 import 'package:earnipay/app/data/model/model.dart';
 import 'package:earnipay/app/modules/home/bloc/home_bloc.dart';
-import 'package:earnipay/app/routes/app_routes.dart';
 import 'package:earnipay/app/widgets/image_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin{
   final controller = ScrollController();
 
   final List<Photo> _photos = [];
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
+    //super.build(context);
     return SafeArea(
       child: Scaffold(
         body: BlocConsumer<HomeBloc, HomeState>(
@@ -102,49 +96,41 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin{
                         if (state is HomePhotosReadyState) {
                           context.read<HomeBloc>().isFetching = false;
                         }
-                        return KeepAlive(
-                          keepAlive: true,
-                          child: IndexedSemantics(
-                            index: index,
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  left: 0,
-                                  right: 0,
-                                  top: 0,
-                                  child:
-                                  EarniNetworkImage(
-                                    photo: _photos[index],
-                                    url: "${_photos[index].image?.regular}",
-                                  ),
-                                ),
-                                Positioned(
-                                  bottom: 10,
-                                  left: 10,
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 2, horizontal: 6),
-                                    decoration: BoxDecoration(
-                                        //color: Colors.purple,
-                                        shape: BoxShape.rectangle,
-                                        borderRadius:
-                                            BorderRadius.circular(8)),
-                                    child: Text(
-                                      '${_photos[index].user?.location}',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                        return Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              right: 0,
+                              top: 0,
+                              child:
+                              EarniNetworkImage(
+                                photo: _photos[index],
+                                url: "${_photos[index].image?.regular}",
+                              ),
                             ),
-                          ),
+                            Positioned(
+                              bottom: 10,
+                              left: 10,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 2, horizontal: 6),
+                                decoration: BoxDecoration(
+                                    //color: Colors.purple,
+                                    shape: BoxShape.rectangle,
+                                    borderRadius:
+                                        BorderRadius.circular(8)),
+                                child: Text(
+                                  '${_photos[index].user?.location}',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ),
+                          ],
                         );
                       },
                       childCount: _photos.isNotEmpty ? _photos.length : 1,
-                      addSemanticIndexes: false,
-                      addAutomaticKeepAlives: false,
-                      addRepaintBoundaries: false,
+
                     ),
                   ),
                 ),
@@ -167,6 +153,6 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin{
     );
   }
 
-  @override
-  bool get wantKeepAlive => true;
+  // @override
+  // bool get wantKeepAlive => true;
 }
