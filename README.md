@@ -28,7 +28,7 @@ The app uses [http package](https://pub.dev/packages/http) for making network ca
 
 I ensured I used ***const*** where necessary for widgets so widgets do not rebuild when its state has not changed.
 
-For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and to ensure the images are cached so they are not always fetched anytime the user goes to the home page, I used ***SliverGrid*** with ***SliverChildBuilderDelegate*** as its delegate. The ***SliverChildBuilderDelegate*** has parameters ***addAutomaticKeepAlives*** set to **true**, to make sure the children are always **alive** and ***addRepaintBoundaries*** set to ***true*** so the **children** do not always need to repaint when the list scrolls. And such children could be effortlessly displayed on the image details page.
+For the list of images and titles, I used [CustomScrollView](https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html) so the list could be rendered efficiently and customisable and to ensure the images are cached so they are not always fetched anytime the user goes to the home page, I used ***SliverGrid*** with ***SliverChildBuilderDelegate*** as its delegate. The ***SliverChildBuilderDelegate*** has parameters ***addAutomaticKeepAlives*** set to **true**, to make sure the children are always **alive** and ***addRepaintBoundaries*** set to ***true*** so the **children** do not always need to repaint when the list scrolls. And such children could be effortlessly displayed on the screen.
 
 ## :surfing_man: Testing :horse_racing:
 Testing is a crucial part of every application development. It ensures the different edge cases of 
